@@ -14,7 +14,7 @@ public class Day03_WebDriverManager {
         WebDriverManager.chromedriver().setup();
 
         //Create chrome driver object
-        WebDriver driver=new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
 
         //maximize the window
         driver.manage().window().maximize();
@@ -23,10 +23,10 @@ public class Day03_WebDriverManager {
         driver.get("https://www.google.com");
 
         //Assert the title
-        String actualTitle=driver.getTitle();
-        String expectedTitle="Google";
-       Assert.assertEquals(expectedTitle, actualTitle);
-       driver.quit();
+        String actualTitle = driver.getTitle();
+        String expectedTitle = "Google";
+        Assert.assertEquals(expectedTitle, actualTitle);
+        driver.quit();
 
     }
 }
