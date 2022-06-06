@@ -14,6 +14,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
 
+
+
 public class Day03_Locators {
 
     //create test method locators
@@ -70,6 +72,16 @@ public class Day03_Locators {
         // sign out from the page
         driver.findElement(By.linkText("Sign out")).click();
 
+        //after sign out we must do verification to make sure you signed out successfully.
+     boolean isSignedOut=driver.getCurrentUrl().equals("http://a.testaddressbook.com/sign_in");
+      Assert.assertTrue(isSignedOut);
+
+         // sign out from the page
+         //2.way:
+        WebElement signinButton=driver.findElement(By.name("commit"));
+       Assert.assertTrue(signinButton.isDisplayed());
+
+       driver.close();
 
     }
 
