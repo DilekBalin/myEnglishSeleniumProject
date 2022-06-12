@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class Actions2 extends TestBase {
+public class Day08_Actions2 extends TestBase {
     @Test
     public void hoverOver() {
         //Given user on yhe https://www.amazon.com
